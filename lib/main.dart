@@ -70,29 +70,41 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset('assets/images/Vector.png'),
+
                     Image.asset('assets/images/Frame.png'),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-                child: Row(
-                  children: [
-                    Text(
-                      'Latest',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
+                child:
+                  SizedBox(
+                    height: 56,
+                    child: Row(
+                      children: [
+                        Text(
+                          'Latest',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            shadows: [
+                              Shadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                blurRadius: 3,
+                                offset: Offset(1, 2),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Spacer(),
+                        Text(
+                          'See all',
+                          style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                        ),
+                      ],
                     ),
-                    Spacer(),
-                    Text(
-                      'See all',
-                      style:
-                      TextStyle(fontSize: 19, fontWeight: FontWeight.w300),
-                    ),
-                  ],
-                ),
+                  )
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
